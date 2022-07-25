@@ -1,0 +1,13 @@
+E:\_Work\_MyProgram\NiceDoc\scr\NiceDoc.Net\NiceDoc.Net\bin\Debug\NiceDoc.Net.exe
+E:\_Work\_MyProgram\NiceDoc\scr\NiceDoc.Net\NiceDoc.Net\bin\Debug\NiceDoc.Net.pdb
+E:\_Work\_MyProgram\NiceDoc\scr\NiceDoc.Net\NiceDoc.Net\obj\Debug\NiceDoc.Net.csprojAssemblyReference.cache
+E:\_Work\_MyProgram\NiceDoc\scr\NiceDoc.Net\NiceDoc.Net\obj\Debug\NiceDoc.Net.csproj.CoreCompileInputs.cache
+E:\_Work\_MyProgram\NiceDoc\scr\NiceDoc.Net\NiceDoc.Net\obj\Debug\NiceDoc.Net.csproj.CopyComplete
+E:\_Work\_MyProgram\NiceDoc\scr\NiceDoc.Net\NiceDoc.Net\obj\Debug\NiceDoc.Net.exe
+E:\_Work\_MyProgram\NiceDoc\scr\NiceDoc.Net\NiceDoc.Net\obj\Debug\NiceDoc.Net.pdb
+E:\_Work\_MyProgram\NiceDoc\scr\NiceDoc.Net\NiceDoc.Net\bin\Debug\ICSharpCode.SharpZipLib.dll
+E:\_Work\_MyProgram\NiceDoc\scr\NiceDoc.Net\NiceDoc.Net\bin\Debug\NPOI.dll
+E:\_Work\_MyProgram\NiceDoc\scr\NiceDoc.Net\NiceDoc.Net\bin\Debug\NPOI.OOXML.dll
+E:\_Work\_MyProgram\NiceDoc\scr\NiceDoc.Net\NiceDoc.Net\bin\Debug\NPOI.OpenXml4Net.dll
+E:\_Work\_MyProgram\NiceDoc\scr\NiceDoc.Net\NiceDoc.Net\bin\Debug\NPOI.OpenXmlFormats.dll
+E:\_Work\_MyProgram\NiceDoc\scr\NiceDoc.Net\NiceDoc.Net\bin\Debug\NPOI.xml
