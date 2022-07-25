@@ -9,7 +9,7 @@ namespace NiceDoc.Net
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("_   _ _          _____             ");
+            Console.WriteLine(" _   _ _          _____             ");
             Console.WriteLine("| \\ | (_)        |  __ \\            ");
             Console.WriteLine("|  \\| |_  ___ ___| |  | | ___   ___ ");
             Console.WriteLine("| . ` | |/ __/ _ \\ |  | |/ _ \\ / __|");
