@@ -191,13 +191,13 @@ namespace NiceDoc.Net
                         //XWPFTableRow row = table.CreateRow();
                         foreach (Dictionary<string, object> listRow in list)
                         {
-                            CT_Row ctRow = docx.Document.body.GetTblArray()[tableIndex].InsertNewTr(i + addRowIndex-1);
+                            CT_Row ctRow = docx.Document.body.GetTblArray()[tableIndex].InsertNewTr(i + addRowIndex - 1);
                             XWPFTableRow newRow = new XWPFTableRow(ctRow, table);
                             copyRowAndPushLabels(newRow, baseRow, listRow);
                             //table.addRow(newRow, i + addRowIndex);
                             addRowIndex++;
                         }
-                        docx.Document.body.GetTblArray()[tableIndex].RemoveTr(i + addRowIndex-1);
+                        docx.Document.body.GetTblArray()[tableIndex].RemoveTr(i + addRowIndex - 1);
                         baseRow = null;
 
                     }
@@ -326,10 +326,11 @@ namespace NiceDoc.Net
                         //标签书签
                         if (pars.ContainsKey(key[0]))
                         {
+                            string val = pars[key[0]] == null ? "" : pars[key[0]].ToString();
                             //普通文本标签
                             if (key.Length == 1)
                             {
-                                run.SetText(nowText.Replace(NiceUtils.labelFormat(label), pars[key[0]].ToString()), 0);
+                                run.SetText(nowText.Replace(NiceUtils.labelFormat(label), val), 0);
                                 break;
                             }
 
@@ -341,9 +342,9 @@ namespace NiceDoc.Net
                                     string group = key[1].Substring(1, key[1].Length - 1);
                                     foreach (string keyVal in group.Split(','))
                                     {
-                                        if (keyVal.IndexOf(pars[key[0]] + ":") == 0)
+                                        if (keyVal.IndexOf(val + ":") == 0)
                                         {
-                                            run.SetText(nowText.Replace(NiceUtils.labelFormat(label), keyVal.Replace(pars[key[0]] + ":", "")), 0);
+                                            run.SetText(nowText.Replace(NiceUtils.labelFormat(label), keyVal.Replace(val + ":", "")), 0);
                                             removeRun(labelRuns);
                                         }
                                     }
@@ -354,7 +355,7 @@ namespace NiceDoc.Net
                                 string[] bools = key[1].Split(':');
                                 if (bools.Length == 2)
                                 {
-                                    run.SetText(nowText.Replace(NiceUtils.labelFormat(label), pars[key[0]].ToString() == "true" ? bools[0] : bools[1]), 0);
+                                    run.SetText(nowText.Replace(NiceUtils.labelFormat(label), val == "true" ? bools[0] : bools[1]), 0);
                                     removeRun(labelRuns);
                                     break;
                                 }
