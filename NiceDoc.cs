@@ -267,19 +267,16 @@ namespace NiceDoc.Net
          */
         private void replaceLabelsInParagraphs(List<XWPFParagraph> paragraphs, Dictionary<string, object> pars)
         {
-            int i = 0;
-            foreach (XWPFParagraph paragraph in paragraphs)
+            for (int i = 0; i < paragraphs.Count; i++)
             {
+                XWPFParagraph paragraph = paragraphs[i];
                 string text = paragraph.Text;
                 if (text == null || text == "" || !text.Contains("{{"))
                     continue;
                 else if (text.Contains("{{v-"))
                     logicLabelsInParagraph(paragraphs, i, pars);
-                else
-                    replaceLabelsInParagraph(paragraph, pars);
-                i++;
+                replaceLabelsInParagraph(paragraph, pars);
             }
-
 
         }
 
@@ -311,7 +308,7 @@ namespace NiceDoc.Net
             List<XWPFRun> labelRuns = new List<XWPFRun>();
             bool isShow = true;
 
-            for (int i = index + 2; i < paragraphs.Count; i++)
+            for (int i = index; i < paragraphs.Count; i++)
             {
                 XWPFParagraph paragraph = paragraphs[i];
                 List<XWPFRun> runs = new List<XWPFRun>(paragraph.Runs);
@@ -365,7 +362,7 @@ namespace NiceDoc.Net
                             {
                                 run.SetText(nowText.Replace(NiceUtils.labelFormat(label), ""), 0);
                                 removeRun(labelRuns);
-                                return;
+                                isShow = true;
                             }
 
 

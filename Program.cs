@@ -38,7 +38,7 @@ namespace NiceDoc.Net
             labels.Add("look", 3);
             //if语句
             labels.Add("showContent", 2);
-
+            labels.Add("ration", 2);
             docx.pushLabels(labels);
 
             //表格
