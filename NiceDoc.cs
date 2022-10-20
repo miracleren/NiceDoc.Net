@@ -267,14 +267,20 @@ namespace NiceDoc.Net
          */
         private void replaceLabelsInParagraphs(List<XWPFParagraph> paragraphs, Dictionary<string, object> pars)
         {
+            int i = 0;
             foreach (XWPFParagraph paragraph in paragraphs)
             {
-                String text = paragraph.Text;
+                string text = paragraph.Text;
                 if (text == null || text == "" || !text.Contains("{{"))
                     continue;
+                else if (text.Contains("{{v-"))
+                    logicLabelsInParagraph(paragraphs, i, pars);
                 else
                     replaceLabelsInParagraph(paragraph, pars);
+                i++;
             }
+
+
         }
 
         /**
@@ -284,12 +290,103 @@ namespace NiceDoc.Net
          */
         private void removeRun(List<XWPFRun> runs)
         {
-            runs.RemoveAt(runs.Count - 1);
-            foreach (XWPFRun run in runs)
+            //runs.RemoveAt(runs.Count - 1);
+            //foreach (XWPFRun run in runs)
+            //{
+            //    run.SetText("", 0);
+            //}
+            for (int i = 0; i < runs.Count - 1; i++)
             {
-                run.SetText("", 0);
+                runs[i].SetText("", 0);
             }
         }
+
+        /**
+        * 逻辑语句处理
+        */
+        private void logicLabelsInParagraph(List<XWPFParagraph> paragraphs, int index, Dictionary<string, object> pars)
+        {
+            string nowText = "";
+            int runCount = 0;
+            List<XWPFRun> labelRuns = new List<XWPFRun>();
+            bool isShow = true;
+
+            for (int i = index + 2; i < paragraphs.Count; i++)
+            {
+                XWPFParagraph paragraph = paragraphs[i];
+                List<XWPFRun> runs = new List<XWPFRun>(paragraph.Runs);
+
+                foreach (XWPFRun run in runs)
+                {
+                    if (run.GetText(0) != null && (run.GetText(0).Contains("{{") || runCount > 0))
+                    {
+                        nowText += run.GetText(0);
+                        runCount++;
+                        labelRuns.Add(run);
+
+                        MatchCollection labels = NiceUtils.getMatchingLabels(nowText);
+                        int labelFindCount = 0;
+                        foreach (Match m in labels)
+                        {
+                            labelFindCount++;
+                            string label = m.Value;
+                            string[] key = label.Split('#');
+
+                            if (key.Length == 2)
+                            {
+                                int indexName = key[1].IndexOf("=") + 1 + key[1].IndexOf("&") + 1;
+                                string keyName = indexName > 0 ? key[1].Substring(0, indexName - 1) : key[1];
+                                if (pars.ContainsKey(keyName))
+                                {
+                                    string val = pars[keyName] == null ? "" : pars[keyName].ToString();
+                                    //条件判断语句
+                                    if (key[0] == "v-if")
+                                    {
+                                        if (key[1].Contains("="))
+                                        {
+                                            isShow = (val == key[1].Substring(indexName));
+                                        }
+                                        else if (key[1].Contains("&"))
+                                        {
+                                            int curVal = Convert.ToInt32(key[1].Substring(indexName));
+                                            isShow = (Convert.ToInt32(val) & curVal) == curVal;
+                                        }
+                                        else
+                                        {
+                                            isShow = (val == "true");
+                                        }
+                                        run.SetText(nowText.Replace(NiceUtils.labelFormat(label), ""), 0);
+                                        removeRun(labelRuns);
+                                        break;
+                                    }
+                                }
+                            }
+                            else if (label == "end-if")
+                            {
+                                run.SetText(nowText.Replace(NiceUtils.labelFormat(label), ""), 0);
+                                removeRun(labelRuns);
+                                return;
+                            }
+
+
+                        }
+                        if (labelFindCount > 0)
+                        {
+                            nowText = "";
+                            runCount = 0;
+                            labelRuns = new List<XWPFRun>();
+                        }
+                    }
+
+                    if (isShow != true)
+                    {
+                        run.SetText("", 0);
+                    }
+
+                }
+            }
+        }
+
 
         /**
          * 段落填充标签
@@ -322,11 +419,14 @@ namespace NiceDoc.Net
                     {
                         labelFindCount++;
                         string label = m.Value;
+
                         string[] key = label.Split('#');
+                        int indexName = key[0].IndexOf("=") + 1 + key[0].IndexOf("&") + 1;
+                        string keyName = indexName > 0 ? key[0].Substring(0, indexName - 1) : key[0];
                         //标签书签
-                        if (pars.ContainsKey(key[0]))
+                        if (pars.ContainsKey(keyName))
                         {
-                            string val = pars[key[0]] == null ? "" : pars[key[0]].ToString();
+                            string val = pars[keyName] == null ? "" : pars[keyName].ToString();
                             //普通文本标签
                             if (key.Length == 1)
                             {
@@ -351,11 +451,27 @@ namespace NiceDoc.Net
                                     break;
                                 }
 
-                                //bool类型标签
-                                string[] bools = key[1].Split(':');
-                                if (bools.Length == 2)
+                                //值判定类型标签
+                                string[] boolVal = key[1].Split(':');
+                                string trueVal = boolVal[0];
+                                string falseVal = boolVal.Length == 1 ? "" : boolVal[1];
+                                if (boolVal.Length >= 1)
                                 {
-                                    run.SetText(nowText.Replace(NiceUtils.labelFormat(label), val == "true" ? bools[0] : bools[1]), 0);
+                                    string textVal = "";
+                                    if (key[0].Contains("="))
+                                    {
+                                        textVal = (val == key[0].Substring(indexName) ? trueVal : falseVal);
+                                    }
+                                    else if (key[0].Contains("&"))
+                                    {
+                                        int curVal = Convert.ToInt32(key[0].Substring(indexName));
+                                        textVal = (Convert.ToInt32(val) & curVal) == curVal ? trueVal : falseVal;
+                                    }
+                                    else
+                                    {
+                                        textVal = val == "true" ? trueVal : falseVal;
+                                    }
+                                    run.SetText(nowText.Replace(NiceUtils.labelFormat(label), textVal), 0);
                                     removeRun(labelRuns);
                                     break;
                                 }
@@ -369,6 +485,29 @@ namespace NiceDoc.Net
                         nowText = "";
                         runCount = 0;
                         labelRuns = new List<XWPFRun>();
+                    }
+                }
+
+            }
+        }
+
+        /**
+         * 清除条件语句产生的空段落
+         */
+        public void removeNullParagraphs()
+        {
+            List<XWPFParagraph> paragraphs = new List<XWPFParagraph>(docx.Paragraphs);
+            List<IBodyElement> listBe = new List<IBodyElement>(docx.BodyElements);
+
+            for (int i = 0; i < listBe.Count; i++)
+            {
+                if (listBe[i].ElementType == BodyElementType.PARAGRAPH)
+                {
+                    if (paragraphs[docx.GetParagraphPos(i)].Text.Contains("R"))
+                    {
+                        docx.RemoveBodyElement(i);
+                        i--;
+                        continue;
                     }
                 }
 

@@ -30,10 +30,15 @@ namespace NiceDoc.Net
 
             //枚举标签
             labels.Add("likeBook", 2);
-
             //布尔标签
             labels.Add("isQ", true);
-            labels.Add("isNew", false);
+            //等于
+            labels.Add("isNew", 2);
+            //多选二进制值
+            labels.Add("look", 3);
+            //if语句
+            labels.Add("showContent", 2);
+
             docx.pushLabels(labels);
 
             //表格
