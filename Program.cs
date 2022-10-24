@@ -38,7 +38,9 @@ namespace NiceDoc.Net
             labels.Add("look", 3);
             //if语句
             labels.Add("showContent", 2);
-            labels.Add("ration", 2);
+            //日期格式标签
+            labels.Add("printDate", DateTime.Now);
+
             docx.pushLabels(labels);
 
             //表格

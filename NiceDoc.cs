@@ -423,16 +423,26 @@ namespace NiceDoc.Net
                         //标签书签
                         if (pars.ContainsKey(keyName))
                         {
-                            string val = pars[keyName] == null ? "" : pars[keyName].ToString();
+                            object val = pars[keyName] == null ? "" : pars[keyName];
                             //普通文本标签
                             if (key.Length == 1)
                             {
-                                run.SetText(nowText.Replace(NiceUtils.labelFormat(label), val), 0);
-                                break;
+                                nowText = nowText.Replace(NiceUtils.labelFormat(label), val.ToString());
+                                run.SetText(nowText, 0);
+                                continue;
                             }
 
                             if (key.Length == 2)
                             {
+                                //日期类型填充
+                                if (key[1].StartsWith("Date:"))
+                                {
+                                    string textVal = val.ToString() == "" ? val.ToString() : Convert.ToDateTime(val).ToString(key[1].Replace("Date:", ""));
+                                    nowText = nowText.Replace(NiceUtils.labelFormat(label), textVal);
+                                    run.SetText(nowText, 0);
+                                    continue;
+                                }
+
                                 //枚举数组标签
                                 if (key[1].StartsWith("[") && key[1].EndsWith("]"))
                                 {
@@ -441,11 +451,12 @@ namespace NiceDoc.Net
                                     {
                                         if (keyVal.IndexOf(val + ":") == 0)
                                         {
-                                            run.SetText(nowText.Replace(NiceUtils.labelFormat(label), keyVal.Replace(val + ":", "")), 0);
+                                            nowText = nowText.Replace(NiceUtils.labelFormat(label), keyVal.Replace(val + ":", ""));
+                                            run.SetText(nowText, 0);
                                             removeRun(labelRuns);
                                         }
                                     }
-                                    break;
+                                    continue;
                                 }
 
                                 //值判定类型标签
@@ -457,7 +468,7 @@ namespace NiceDoc.Net
                                     string textVal = "";
                                     if (key[0].Contains("="))
                                     {
-                                        textVal = (val == key[0].Substring(indexName) ? trueVal : falseVal);
+                                        textVal = (val.ToString() == key[0].Substring(indexName) ? trueVal : falseVal);
                                     }
                                     else if (key[0].Contains("&"))
                                     {
@@ -466,11 +477,12 @@ namespace NiceDoc.Net
                                     }
                                     else
                                     {
-                                        textVal = val == "true" ? trueVal : falseVal;
+                                        textVal = val.ToString() == "true" ? trueVal : falseVal;
                                     }
-                                    run.SetText(nowText.Replace(NiceUtils.labelFormat(label), textVal), 0);
+                                    nowText = nowText.Replace(NiceUtils.labelFormat(label), textVal);
+                                    run.SetText(nowText, 0);
                                     removeRun(labelRuns);
-                                    break;
+                                    continue;
                                 }
 
                             }
