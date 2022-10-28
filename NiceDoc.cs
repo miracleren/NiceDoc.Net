@@ -19,6 +19,8 @@ namespace NiceDoc.Net
     {
         //private HWPFDocument doc;
         private XWPFDocument docx;
+        private int status = 0;
+        private List<XWPFTable> allTables = new List<XWPFTable>();
 
         /**
          * 根据路径初始化word模板
@@ -35,6 +37,11 @@ namespace NiceDoc.Net
             {
                 inFile = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
                 docx = new XWPFDocument(inFile);
+
+                //遍历段落生加载表格列表
+                allTables.AddRange(new List<XWPFTable>(docx.Tables));
+                pushLabels(new Dictionary<string, object>());
+                status = 1;
             }
             catch (Exception e)
             {
@@ -62,7 +69,7 @@ namespace NiceDoc.Net
             replaceLabelsInParagraphs(paragraphs, labels);
 
             //遍历表格内容，并填充标签值
-            List<XWPFTable> tables = new List<XWPFTable>(docx.Tables);
+            List<XWPFTable> tables = status == 0 ? new List<XWPFTable>(docx.Tables) : allTables;
             foreach (XWPFTable table in tables)
             {
                 //表格行
@@ -117,7 +124,8 @@ namespace NiceDoc.Net
          */
         public void pushTable(string tableName, List<Dictionary<string, object>> list)
         {
-            List<XWPFTable> tables = new List<XWPFTable>(docx.Tables);
+            //List<XWPFTable> tables = new List<XWPFTable>(docx.Tables);
+            List<XWPFTable> tables = allTables;
             int tableIndex = 0;
             foreach (XWPFTable table in tables)
             {
@@ -191,13 +199,15 @@ namespace NiceDoc.Net
                         //XWPFTableRow row = table.CreateRow();
                         foreach (Dictionary<string, object> listRow in list)
                         {
-                            CT_Row ctRow = docx.Document.body.GetTblArray()[tableIndex].InsertNewTr(i + addRowIndex - 1);
+                            //CT_Row ctRow2 = docx.Document.body.GetTblArray()[tableIndex].InsertNewTr(i + addRowIndex - 1);
+                            CT_Row ctRow = table.GetCTTbl().InsertNewTr(i + addRowIndex - 2);
                             XWPFTableRow newRow = new XWPFTableRow(ctRow, table);
                             copyRowAndPushLabels(newRow, baseRow, listRow);
                             //table.addRow(newRow, i + addRowIndex);
                             addRowIndex++;
                         }
-                        docx.Document.body.GetTblArray()[tableIndex].RemoveTr(i + addRowIndex - 1);
+                        //docx.Document.body.GetTblArray()[tableIndex].RemoveTr(i + addRowIndex - 1);
+                        table.GetCTTbl().RemoveTr(i + addRowIndex - 1);
                         baseRow = null;
 
                     }
@@ -270,6 +280,19 @@ namespace NiceDoc.Net
             for (int i = 0; i < paragraphs.Count; i++)
             {
                 XWPFParagraph paragraph = paragraphs[i];
+
+                //获取doc表格，包括子表格，docx.getTables()无法获取子表格
+                if (status == 0 )
+                {
+                    foreach(XWPFTable table in new List<XWPFTable>(paragraph.Body.Tables))
+                    {
+                        if(!allTables.Contains(table))
+                        {
+                            allTables.Add(table);
+                        }
+                    }
+                }
+
                 string text = paragraph.Text;
                 if (text == null || text == "" || !text.Contains("{{"))
                     continue;
