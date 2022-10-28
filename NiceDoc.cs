@@ -200,7 +200,7 @@ namespace NiceDoc.Net
                         foreach (Dictionary<string, object> listRow in list)
                         {
                             //CT_Row ctRow2 = docx.Document.body.GetTblArray()[tableIndex].InsertNewTr(i + addRowIndex - 1);
-                            CT_Row ctRow = table.GetCTTbl().InsertNewTr(i + addRowIndex - 2);
+                            CT_Row ctRow = table.GetCTTbl().InsertNewTr(i + addRowIndex - 1);
                             XWPFTableRow newRow = new XWPFTableRow(ctRow, table);
                             copyRowAndPushLabels(newRow, baseRow, listRow);
                             //table.addRow(newRow, i + addRowIndex);

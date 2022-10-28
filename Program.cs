@@ -47,13 +47,13 @@ namespace NiceDoc.Net
             List<Dictionary<string, object>> books = new List<Dictionary<string, object>>();
             Dictionary<string, object> book1 = new Dictionary<string, object>();
             book1.Add("name", "汉文学史纲要");
-            book1.Add("time", "1938年，鲁迅全集出版社");
+            book1.Add("version", "1938年，鲁迅全集出版社");
             books.Add(book1);
             Dictionary<string, object> book2 = new Dictionary<string, object>();
             book2.Add("name", "中国小说史略");
-            book2.Add("time", "1923年12月，上册；1924年6月，下册");
+            book2.Add("version", "1923年12月，上册；1924年6月，下册");
             books.Add(book2);
-            docx.pushTable("books", books);
+            docx.pushTable("sealedList", books);
 
             //生成文档
             docx.save(path, Guid.NewGuid() + ".docx");
