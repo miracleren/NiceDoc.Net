@@ -291,6 +291,7 @@ namespace NiceDoc.Net
                             allTables.Add(table);
                         }
                     }
+                    return;
                 }
 
                 string text = paragraph.Text;
@@ -375,9 +376,19 @@ namespace NiceDoc.Net
                                         {
                                             isShow = (val == "true");
                                         }
+
+                                        if (isShow == false)
+                                        {
+                                            if (nowText.IndexOf("{{end-if}}") > nowText.IndexOf(NiceUtils.labelFormat(label)))
+                                                nowText = nowText.Replace(nowText.Substring(nowText.IndexOf(NiceUtils.labelFormat(label)), nowText.IndexOf("{{end-if}}")), "");
+                                            else
+                                                nowText = nowText.Replace(nowText.Substring(nowText.IndexOf(NiceUtils.labelFormat(label))), "");
+                                        }
+                                        else
+                                            nowText = nowText.Replace(NiceUtils.labelFormat(label), "");
+
                                         run.SetText(nowText.Replace(NiceUtils.labelFormat(label), ""), 0);
                                         removeRun(labelRuns);
-                                        break;
                                     }
                                 }
                             }
