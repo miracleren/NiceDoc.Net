@@ -208,7 +208,8 @@ namespace NiceDoc.Net
                         }
                         //docx.Document.body.GetTblArray()[tableIndex].RemoveTr(i + addRowIndex - 1);
                         table.GetCTTbl().RemoveTr(i + addRowIndex - 1);
-                        baseRow = null;
+                        //baseRow = null;
+                        break;
 
                     }
                 }
