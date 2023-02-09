@@ -1,10 +1,13 @@
 ﻿
 using NPOI.OpenXmlFormats.Wordprocessing;
+using NPOI.Util;
 using NPOI.XWPF.UserModel;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Windows.Media.Imaging;
 
 /**
  * 基于模板快速生成word文档
@@ -283,11 +286,11 @@ namespace NiceDoc.Net
                 XWPFParagraph paragraph = paragraphs[i];
 
                 //获取doc表格，包括子表格，docx.getTables()无法获取子表格
-                if (status == 0 )
+                if (status == 0)
                 {
-                    foreach(XWPFTable table in new List<XWPFTable>(paragraph.Body.Tables))
+                    foreach (XWPFTable table in new List<XWPFTable>(paragraph.Body.Tables))
                     {
-                        if(!allTables.Contains(table))
+                        if (!allTables.Contains(table))
                         {
                             allTables.Add(table);
                         }
@@ -522,6 +525,43 @@ namespace NiceDoc.Net
 
                             }
                         }
+                        else if (key[0] == "v-image")
+                        {
+                            //图片标签处理
+                            try
+                            {
+                                //获取图片相关信息
+                                run.SetText("", 0);
+                                removeRun(labelRuns);
+                                string[] val = key[1].Split(',');
+                                string path = "";
+                                int scale = 100;
+                                string picName = "";
+                                foreach (string valKey in val)
+                                {
+                                    if (valKey.StartsWith("path:"))
+                                    {
+                                        picName = valKey.Replace("path:", "");
+                                        path = pars[picName].ToString();
+                                    }
+                                    if (valKey.StartsWith("scale:"))
+                                        scale = Convert.ToInt32(valKey.Replace("scale:", ""));
+                                }
+
+                                //计算高度宽度
+                                Bitmap bitmap = new Bitmap(path);
+                                int width = Units.ToEMU(bitmap.Width * scale / 100);
+                                int height = Units.ToEMU(bitmap.Height * scale / 100);
+
+                                //插入图片
+                                FileStream stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);
+                                run.AddPicture(stream, XWPFDocumentPicType(path), picName, width, height);
+                            }
+                            catch (Exception e)
+                            {
+                                Console.WriteLine(e.ToString());
+                            }
+                        }
                     }
 
                     if (labelFindCount > 0)
@@ -533,6 +573,55 @@ namespace NiceDoc.Net
                 }
 
             }
+        }
+
+        public int XWPFDocumentPicType(string path)
+        {
+            if (path.EndsWith(".emf"))
+            {
+                return (int)PictureType.EMF;
+            }
+            else if (path.EndsWith(".wmf"))
+            {
+                return (int)PictureType.WMF;
+            }
+            else if (path.EndsWith(".pict"))
+            {
+                return (int)PictureType.PICT;
+            }
+            else if (path.EndsWith(".jpeg") || path.EndsWith(".jpg"))
+            {
+                return (int)PictureType.JPEG;
+            }
+            else if (path.EndsWith(".png"))
+            {
+                return (int)PictureType.PNG;
+            }
+            else if (path.EndsWith(".dib"))
+            {
+                return (int)PictureType.DIB;
+            }
+            else if (path.EndsWith(".gif"))
+            {
+                return (int)PictureType.GIF;
+            }
+            else if (path.EndsWith(".tiff"))
+            {
+                return (int)PictureType.TIFF;
+            }
+            else if (path.EndsWith(".eps"))
+            {
+                return (int)PictureType.EPS;
+            }
+            else if (path.EndsWith(".bmp"))
+            {
+                return (int)PictureType.BMP;
+            }
+            else if (path.EndsWith(".wpg"))
+            {
+                return (int)PictureType.WPG;
+            }
+            return 0;
         }
 
         /**
