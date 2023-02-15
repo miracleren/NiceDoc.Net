@@ -19,5 +19,5 @@ E:\_Work\_MyProgram\NiceDoc\scr\NiceDoc.Net\NiceDoc.Net\bin\Debug\NPOI.OpenXml4N
 E:\_Work\_MyProgram\NiceDoc\scr\NiceDoc.Net\NiceDoc.Net\bin\Debug\NPOI.OpenXml4Net.xml
 E:\_Work\_MyProgram\NiceDoc\scr\NiceDoc.Net\NiceDoc.Net\bin\Debug\NPOI.OpenXmlFormats.pdb
 E:\_Work\_MyProgram\NiceDoc\scr\NiceDoc.Net\NiceDoc.Net\obj\Debug\NiceDoc.Net.csprojAssemblyReference.cache
-E:\_Work\_MyProgram\NiceDoc\scr\NiceDoc.Net\NiceDoc.Net\bin\Debug\NiceDoc.Net.exe
-E:\_Work\_MyProgram\NiceDoc\scr\NiceDoc.Net\NiceDoc.Net\obj\Debug\NiceDoc.Net.exe
+E:\_Work\_MyProgram\NiceDoc\scr\NiceDoc.Net\NiceDoc.Net\bin\Debug\NiceDoc.Net.dll
+E:\_Work\_MyProgram\NiceDoc\scr\NiceDoc.Net\NiceDoc.Net\obj\Debug\NiceDoc.Net.dll

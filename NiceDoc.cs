@@ -531,8 +531,6 @@ namespace NiceDoc.Net
                             try
                             {
                                 //获取图片相关信息
-                                run.SetText("", 0);
-                                removeRun(labelRuns);
                                 string[] val = key[1].Split(',');
                                 string path = "";
                                 int scale = 100;
@@ -542,20 +540,26 @@ namespace NiceDoc.Net
                                     if (valKey.StartsWith("path:"))
                                     {
                                         picName = valKey.Replace("path:", "");
-                                        path = pars[picName].ToString();
+                                       
                                     }
                                     if (valKey.StartsWith("scale:"))
                                         scale = Convert.ToInt32(valKey.Replace("scale:", ""));
                                 }
 
-                                //计算高度宽度
-                                Bitmap bitmap = new Bitmap(path);
-                                int width = Units.ToEMU(bitmap.Width * scale / 100);
-                                int height = Units.ToEMU(bitmap.Height * scale / 100);
+                                if (pars.ContainsKey(picName))
+                                {
+                                    run.SetText("", 0);
+                                    removeRun(labelRuns);
+                                    path = pars[picName].ToString();
+                                    //计算高度宽度
+                                    Bitmap bitmap = new Bitmap(path);
+                                    int width = Units.ToEMU(bitmap.Width * scale / 100);
+                                    int height = Units.ToEMU(bitmap.Height * scale / 100);
 
-                                //插入图片
-                                FileStream stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);
-                                run.AddPicture(stream, XWPFDocumentPicType(path), picName, width, height);
+                                    //插入图片
+                                    FileStream stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);
+                                    run.AddPicture(stream, XWPFDocumentPicType(path), picName, width, height);
+                                }
                             }
                             catch (Exception e)
                             {
