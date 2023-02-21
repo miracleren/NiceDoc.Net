@@ -551,14 +551,17 @@ namespace NiceDoc.Net
                                     run.SetText("", 0);
                                     removeRun(labelRuns);
                                     path = pars[picName].ToString();
+
                                     //计算高度宽度
                                     Bitmap bitmap = new Bitmap(path);
                                     int width = Units.ToEMU(bitmap.Width * scale / 100);
                                     int height = Units.ToEMU(bitmap.Height * scale / 100);
+                                    bitmap.Dispose();
 
                                     //插入图片
                                     FileStream stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);
                                     run.AddPicture(stream, XWPFDocumentPicType(path), picName, width, height);
+                                    stream.Close();
                                 }
                             }
                             catch (Exception e)
