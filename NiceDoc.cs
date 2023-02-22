@@ -531,7 +531,6 @@ namespace NiceDoc.Net
 
                             //获取图片相关信息
                             string[] val = key[1].Split(',');
-                            string path = "";
                             int scale = 100;
                             string picName = "";
                             foreach (string valKey in val)
@@ -550,7 +549,7 @@ namespace NiceDoc.Net
                                 run.SetText("", 0);
                                 removeRun(labelRuns);
 
-                                path = Convert.ToString(pars[picName]);
+                                string path = Convert.ToString(pars[picName]);
                                 if (!string.IsNullOrEmpty(path))
                                 {
                                     try
