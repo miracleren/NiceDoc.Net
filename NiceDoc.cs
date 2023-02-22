@@ -550,11 +550,12 @@ namespace NiceDoc.Net
                                 run.SetText("", 0);
                                 removeRun(labelRuns);
 
-                                if (!string.IsNullOrEmpty(Convert.ToString(pars[picName])))
+                                path = Convert.ToString(pars[picName]);
+                                if (!string.IsNullOrEmpty(path))
                                 {
                                     try
                                     {
-                                        path = pars[picName].ToString();
+
                                         //计算高度宽度
                                         Bitmap bitmap = new Bitmap(path);
                                         int width = Units.ToEMU(bitmap.Width * scale / 100);
