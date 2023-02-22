@@ -528,46 +528,51 @@ namespace NiceDoc.Net
                         else if (key[0] == "v-image")
                         {
                             //图片标签处理
-                            try
+
+                            //获取图片相关信息
+                            string[] val = key[1].Split(',');
+                            string path = "";
+                            int scale = 100;
+                            string picName = "";
+                            foreach (string valKey in val)
                             {
-                                //获取图片相关信息
-                                string[] val = key[1].Split(',');
-                                string path = "";
-                                int scale = 100;
-                                string picName = "";
-                                foreach (string valKey in val)
+                                if (valKey.StartsWith("path:"))
                                 {
-                                    if (valKey.StartsWith("path:"))
+                                    picName = valKey.Replace("path:", "");
+
+                                }
+                                if (valKey.StartsWith("scale:"))
+                                    scale = Convert.ToInt32(valKey.Replace("scale:", ""));
+                            }
+
+                            if (pars.ContainsKey(picName))
+                            {
+                                run.SetText("", 0);
+                                removeRun(labelRuns);
+
+                                if (pars[picName] != null)
+                                {
+                                    try
                                     {
-                                        picName = valKey.Replace("path:", "");
-                                       
+                                        path = pars[picName].ToString();
+                                        //计算高度宽度
+                                        Bitmap bitmap = new Bitmap(path);
+                                        int width = Units.ToEMU(bitmap.Width * scale / 100);
+                                        int height = Units.ToEMU(bitmap.Height * scale / 100);
+                                        bitmap.Dispose();
+
+                                        //插入图片
+                                        FileStream stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);
+                                        run.AddPicture(stream, XWPFDocumentPicType(path), picName, width, height);
+                                        stream.Close();
                                     }
-                                    if (valKey.StartsWith("scale:"))
-                                        scale = Convert.ToInt32(valKey.Replace("scale:", ""));
-                                }
-
-                                if (pars.ContainsKey(picName))
-                                {
-                                    run.SetText("", 0);
-                                    removeRun(labelRuns);
-                                    path = pars[picName].ToString();
-
-                                    //计算高度宽度
-                                    Bitmap bitmap = new Bitmap(path);
-                                    int width = Units.ToEMU(bitmap.Width * scale / 100);
-                                    int height = Units.ToEMU(bitmap.Height * scale / 100);
-                                    bitmap.Dispose();
-
-                                    //插入图片
-                                    FileStream stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);
-                                    run.AddPicture(stream, XWPFDocumentPicType(path), picName, width, height);
-                                    stream.Close();
+                                    catch (Exception e)
+                                    {
+                                        Console.WriteLine(e.ToString());
+                                    }
                                 }
                             }
-                            catch (Exception e)
-                            {
-                                Console.WriteLine(e.ToString());
-                            }
+
                         }
                     }
 
