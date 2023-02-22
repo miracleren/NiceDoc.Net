@@ -550,7 +550,7 @@ namespace NiceDoc.Net
                                 run.SetText("", 0);
                                 removeRun(labelRuns);
 
-                                if (pars[picName] != null)
+                                if (!string.IsNullOrEmpty(Convert.ToString(pars[picName])))
                                 {
                                     try
                                     {
