@@ -533,15 +533,15 @@ namespace NiceDoc.Net
                             string[] val = key[1].Split(',');
                             int scale = 100;
                             string picName = "";
+                            string[] sizes = { };
                             foreach (string valKey in val)
                             {
                                 if (valKey.StartsWith("path:"))
-                                {
                                     picName = valKey.Replace("path:", "");
-
-                                }
                                 if (valKey.StartsWith("scale:"))
                                     scale = Convert.ToInt32(valKey.Replace("scale:", ""));
+                                if (valKey.StartsWith("size:"))
+                                    sizes = valKey.Replace("size:", "").Split('*');
                             }
 
                             if (pars.ContainsKey(picName))
@@ -554,12 +554,20 @@ namespace NiceDoc.Net
                                 {
                                     try
                                     {
-
+                                        int width, height;
                                         //计算高度宽度
-                                        Bitmap bitmap = new Bitmap(path);
-                                        int width = Units.ToEMU(bitmap.Width * scale / 100);
-                                        int height = Units.ToEMU(bitmap.Height * scale / 100);
-                                        bitmap.Dispose();
+                                        if (sizes.Length == 2)
+                                        {
+                                            width = Units.ToEMU(Convert.ToDouble(sizes[0]));
+                                            height = Units.ToEMU(Convert.ToDouble(sizes[1]));
+                                        }
+                                        else
+                                        {
+                                            Bitmap bitmap = new Bitmap(path);
+                                            width = Units.ToEMU(bitmap.Width * scale / 100);
+                                            height = Units.ToEMU(bitmap.Height * scale / 100);
+                                            bitmap.Dispose();
+                                        }
 
                                         //插入图片
                                         FileStream stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);
