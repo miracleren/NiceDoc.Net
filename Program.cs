@@ -29,7 +29,7 @@ namespace NiceDoc.Net
             labels.Add("press", "鲁迅同学出版社");
 
             //枚举标签
-            labels.Add("likeBook", 2);
+            labels.Add("likeBook", 3);
             //布尔标签
             labels.Add("isQ", true);
             //等于

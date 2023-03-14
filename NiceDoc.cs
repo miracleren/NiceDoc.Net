@@ -484,7 +484,7 @@ namespace NiceDoc.Net
                                 //枚举数组标签
                                 if (key[1].StartsWith("[") && key[1].EndsWith("]"))
                                 {
-                                    string group = key[1].Substring(1, key[1].Length - 1);
+                                    string group = key[1].Substring(1, key[1].Length - 2);
                                     foreach (string keyVal in group.Split(','))
                                     {
                                         if (keyVal.IndexOf(val + ":") == 0)
