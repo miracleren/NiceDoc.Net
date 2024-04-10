@@ -3,30 +3,34 @@
   "WorkspaceRootPath": "E:\\_Work2024\\MyCoolProject\\NiceDoc\\scr\\NiceDoc.Net\\NiceDoc.Net\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|e:\\_work2024\\mycoolproject\\nicedoc\\scr\\nicedoc.net\\nicedoc.net\\niceexcel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|solutionrelative:niceexcel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\_Work2024\\MyCoolProject\\NiceDoc\\scr\\NiceDoc.Net\\NiceDoc.Net\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|NiceDoc.Net||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|e:\\_work2024\\mycoolproject\\nicedoc\\scr\\nicedoc.net\\nicedoc.net\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|E:\\_Work2024\\MyCoolProject\\NiceDoc\\scr\\NiceDoc.Net\\NiceDoc.Net\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|solutionrelative:packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|e:\\_work2024\\mycoolproject\\nicedoc\\scr\\nicedoc.net\\nicedoc.net\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|e:\\_work2024\\mycoolproject\\nicedoc\\scr\\nicedoc.net\\nicedoc.net\\niceexcel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|solutionrelative:niceexcel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|E:\\_Work2024\\MyCoolProject\\NiceDoc\\scr\\NiceDoc.Net\\NiceDoc.Net\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|e:\\_work2024\\mycoolproject\\nicedoc\\scr\\nicedoc.net\\nicedoc.net\\testtemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|E:\\_Work2024\\MyCoolProject\\NiceDoc\\scr\\NiceDoc.Net\\NiceDoc.Net\\testtemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|solutionrelative:testtemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|e:\\_work2024\\mycoolproject\\nicedoc\\scr\\nicedoc.net\\nicedoc.net\\niceutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|E:\\_Work2024\\MyCoolProject\\NiceDoc\\scr\\NiceDoc.Net\\NiceDoc.Net\\niceutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|solutionrelative:niceutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|e:\\_work2024\\mycoolproject\\nicedoc\\scr\\nicedoc.net\\nicedoc.net\\nicedoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|E:\\_Work2024\\MyCoolProject\\NiceDoc\\scr\\NiceDoc.Net\\NiceDoc.Net\\nicedoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|solutionrelative:nicedoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -40,11 +44,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "README.md",
+              "DocumentMoniker": "E:\\_Work2024\\MyCoolProject\\NiceDoc\\scr\\NiceDoc.Net\\NiceDoc.Net\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "E:\\_Work2024\\MyCoolProject\\NiceDoc\\scr\\NiceDoc.Net\\NiceDoc.Net\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2024-04-10T08:14:39.119Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -60,7 +77,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "NiceUtils.cs",
               "DocumentMoniker": "E:\\_Work2024\\MyCoolProject\\NiceDoc\\scr\\NiceDoc.Net\\NiceDoc.Net\\NiceUtils.cs",
               "RelativeDocumentMoniker": "NiceUtils.cs",
@@ -68,12 +85,11 @@
               "RelativeToolTip": "NiceUtils.cs",
               "ViewState": "AQIAAE4AAAAAAAAAAADwv2oAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T07:30:28.689Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-10T07:30:28.689Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "TestTemplate.cs",
               "DocumentMoniker": "E:\\_Work2024\\MyCoolProject\\NiceDoc\\scr\\NiceDoc.Net\\NiceDoc.Net\\TestTemplate.cs",
               "RelativeDocumentMoniker": "TestTemplate.cs",
@@ -81,12 +97,11 @@
               "RelativeToolTip": "TestTemplate.cs",
               "ViewState": "AQIAAFYAAAAAAAAAAAAtwGUAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T06:58:07.82Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-10T06:58:07.82Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "NiceExcel.cs",
               "DocumentMoniker": "E:\\_Work2024\\MyCoolProject\\NiceDoc\\scr\\NiceDoc.Net\\NiceDoc.Net\\NiceExcel.cs",
               "RelativeDocumentMoniker": "NiceExcel.cs",
@@ -99,7 +114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "NiceDoc.cs",
               "DocumentMoniker": "E:\\_Work2024\\MyCoolProject\\NiceDoc\\scr\\NiceDoc.Net\\NiceDoc.Net\\NiceDoc.cs",
               "RelativeDocumentMoniker": "NiceDoc.cs",
@@ -107,12 +122,11 @@
               "RelativeToolTip": "NiceDoc.cs",
               "ViewState": "AQIAALgBAAAAAAAAAAAtwMQBAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T06:14:33.306Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-10T06:14:33.306Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\_Work2024\\MyCoolProject\\NiceDoc\\scr\\NiceDoc.Net\\NiceDoc.Net\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -120,8 +134,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T06:13:56.394Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-10T06:13:56.394Z"
             },
             {
               "$type": "Document",
