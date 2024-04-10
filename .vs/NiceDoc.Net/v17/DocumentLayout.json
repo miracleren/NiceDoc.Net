@@ -14,7 +14,7 @@
       "RelativeMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|solutionrelative:packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|e:\\_work2024\\mycoolproject\\nicedoc\\scr\\nicedoc.net\\nicedoc.net\\niceexcel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|E:\\_Work2024\\MyCoolProject\\NiceDoc\\scr\\NiceDoc.Net\\NiceDoc.Net\\niceexcel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|solutionrelative:niceexcel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -32,9 +32,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|E:\\_Work2024\\MyCoolProject\\NiceDoc\\scr\\NiceDoc.Net\\NiceDoc.Net\\nicedoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|solutionrelative:nicedoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|e:\\_work2024\\mycoolproject\\nicedoc\\scr\\nicedoc.net\\nicedoc.net\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,7 +55,7 @@
               "RelativeDocumentMoniker": "README.md",
               "ToolTip": "E:\\_Work2024\\MyCoolProject\\NiceDoc\\scr\\NiceDoc.Net\\NiceDoc.Net\\README.md",
               "RelativeToolTip": "README.md",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAArAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
               "WhenOpened": "2024-04-10T08:14:39.119Z",
               "EditorCaption": ""
@@ -72,8 +69,7 @@
               "ToolTip": "E:\\_Work2024\\MyCoolProject\\NiceDoc\\scr\\NiceDoc.Net\\NiceDoc.Net\\NiceDoc.Net.csproj",
               "RelativeToolTip": "NiceDoc.Net.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-04-10T07:57:23.309Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-10T07:57:23.309Z"
             },
             {
               "$type": "Document",
@@ -109,8 +105,7 @@
               "RelativeToolTip": "NiceExcel.cs",
               "ViewState": "AQIAAMkAAAAAAAAAAAAkwOYAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T06:18:29.199Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-10T06:18:29.199Z"
             },
             {
               "$type": "Document",
@@ -146,8 +141,7 @@
               "RelativeToolTip": "packages.config",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-04-10T06:13:18.932Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-10T06:13:18.932Z"
             }
           ]
         }
