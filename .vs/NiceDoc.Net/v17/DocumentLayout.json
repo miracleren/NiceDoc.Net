@@ -1,0 +1,144 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\_Work2024\\MyCoolProject\\NiceDoc\\scr\\NiceDoc.Net\\NiceDoc.Net\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|e:\\_work2024\\mycoolproject\\nicedoc\\scr\\nicedoc.net\\nicedoc.net\\niceexcel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|solutionrelative:niceexcel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|NiceDoc.Net||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|e:\\_work2024\\mycoolproject\\nicedoc\\scr\\nicedoc.net\\nicedoc.net\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|solutionrelative:packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|e:\\_work2024\\mycoolproject\\nicedoc\\scr\\nicedoc.net\\nicedoc.net\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|e:\\_work2024\\mycoolproject\\nicedoc\\scr\\nicedoc.net\\nicedoc.net\\testtemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|solutionrelative:testtemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|e:\\_work2024\\mycoolproject\\nicedoc\\scr\\nicedoc.net\\nicedoc.net\\niceutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|solutionrelative:niceutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|e:\\_work2024\\mycoolproject\\nicedoc\\scr\\nicedoc.net\\nicedoc.net\\nicedoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|solutionrelative:nicedoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A0F1F54-57DE-48C9-9118-7435AF4D950B}|NiceDoc.Net.csproj|e:\\_work2024\\mycoolproject\\nicedoc\\scr\\nicedoc.net\\nicedoc.net\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NiceDoc.Net",
+              "DocumentMoniker": "E:\\_Work2024\\MyCoolProject\\NiceDoc\\scr\\NiceDoc.Net\\NiceDoc.Net\\NiceDoc.Net.csproj",
+              "RelativeDocumentMoniker": "NiceDoc.Net.csproj",
+              "ToolTip": "E:\\_Work2024\\MyCoolProject\\NiceDoc\\scr\\NiceDoc.Net\\NiceDoc.Net\\NiceDoc.Net.csproj",
+              "RelativeToolTip": "NiceDoc.Net.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-04-10T07:57:23.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "NiceUtils.cs",
+              "DocumentMoniker": "E:\\_Work2024\\MyCoolProject\\NiceDoc\\scr\\NiceDoc.Net\\NiceDoc.Net\\NiceUtils.cs",
+              "RelativeDocumentMoniker": "NiceUtils.cs",
+              "ToolTip": "E:\\_Work2024\\MyCoolProject\\NiceDoc\\scr\\NiceDoc.Net\\NiceDoc.Net\\NiceUtils.cs",
+              "RelativeToolTip": "NiceUtils.cs",
+              "ViewState": "AQIAAE4AAAAAAAAAAADwv2oAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T07:30:28.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TestTemplate.cs",
+              "DocumentMoniker": "E:\\_Work2024\\MyCoolProject\\NiceDoc\\scr\\NiceDoc.Net\\NiceDoc.Net\\TestTemplate.cs",
+              "RelativeDocumentMoniker": "TestTemplate.cs",
+              "ToolTip": "E:\\_Work2024\\MyCoolProject\\NiceDoc\\scr\\NiceDoc.Net\\NiceDoc.Net\\TestTemplate.cs",
+              "RelativeToolTip": "TestTemplate.cs",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAtwGUAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T06:58:07.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NiceExcel.cs",
+              "DocumentMoniker": "E:\\_Work2024\\MyCoolProject\\NiceDoc\\scr\\NiceDoc.Net\\NiceDoc.Net\\NiceExcel.cs",
+              "RelativeDocumentMoniker": "NiceExcel.cs",
+              "ToolTip": "E:\\_Work2024\\MyCoolProject\\NiceDoc\\scr\\NiceDoc.Net\\NiceDoc.Net\\NiceExcel.cs",
+              "RelativeToolTip": "NiceExcel.cs",
+              "ViewState": "AQIAAMkAAAAAAAAAAAAkwOYAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T06:18:29.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "NiceDoc.cs",
+              "DocumentMoniker": "E:\\_Work2024\\MyCoolProject\\NiceDoc\\scr\\NiceDoc.Net\\NiceDoc.Net\\NiceDoc.cs",
+              "RelativeDocumentMoniker": "NiceDoc.cs",
+              "ToolTip": "E:\\_Work2024\\MyCoolProject\\NiceDoc\\scr\\NiceDoc.Net\\NiceDoc.Net\\NiceDoc.cs",
+              "RelativeToolTip": "NiceDoc.cs",
+              "ViewState": "AQIAALgBAAAAAAAAAAAtwMQBAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T06:14:33.306Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\_Work2024\\MyCoolProject\\NiceDoc\\scr\\NiceDoc.Net\\NiceDoc.Net\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\_Work2024\\MyCoolProject\\NiceDoc\\scr\\NiceDoc.Net\\NiceDoc.Net\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T06:13:56.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "packages.config",
+              "DocumentMoniker": "E:\\_Work2024\\MyCoolProject\\NiceDoc\\scr\\NiceDoc.Net\\NiceDoc.Net\\packages.config",
+              "RelativeDocumentMoniker": "packages.config",
+              "ToolTip": "E:\\_Work2024\\MyCoolProject\\NiceDoc\\scr\\NiceDoc.Net\\NiceDoc.Net\\packages.config",
+              "RelativeToolTip": "packages.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-04-10T06:13:18.932Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

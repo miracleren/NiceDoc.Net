@@ -1,4 +1,5 @@
 ﻿
+using NPOI.SS.Formula.Eval;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
@@ -25,7 +26,7 @@ namespace NiceDoc.Net
         public static MatchCollection getMatchingLabels(String str)
         {
             string pattern = "(?<=\\{\\{)(.+?)(?=\\}\\})";
-            MatchCollection matcher = Regex.Matches(str,pattern);
+            MatchCollection matcher = Regex.Matches(str, pattern);
             return matcher;
         }
 
@@ -53,7 +54,7 @@ namespace NiceDoc.Net
             {
                 try
                 {
-                    map.Add(field.Name, field.GetValue(entity,null));
+                    map.Add(field.Name, field.GetValue(entity, null));
                 }
                 catch (Exception e)
                 {
@@ -88,6 +89,18 @@ namespace NiceDoc.Net
         public static string toString(object val)
         {
             return val == null ? "" : val.ToString();
+        }
+
+        /**
+     * 判断对象是否是数值
+     *
+     * @param object
+     * @return
+     */
+        public static bool isNumber(Object val)
+        {
+            Type type = val.GetType();
+            return type.IsPrimitive && type != typeof(bool) && type != typeof(char);
         }
     }
 }
